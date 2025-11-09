@@ -1,6 +1,6 @@
-import csv
+    import csv
 
-class Imovel:
+    class Imovel:
     def __init__(self, tipo, quartos=1, garagem=False, criancas=False, vagas_estudio=0):
         self.tipo = tipo.lower()
         self.quartos = quartos
@@ -47,7 +47,7 @@ class Imovel:
         return contrato_total, valor_parcela
 
 
-def gerar_csv(valor_mensal, valor_parcela):
+    def gerar_csv(valor_mensal, valor_parcela):
     with open("orcamento_aluguel.csv", "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(["Mês", "Valor Aluguel (R$)", "Parcela Contrato (R$)", "Total Mensal (R$)"])
@@ -57,7 +57,7 @@ def gerar_csv(valor_mensal, valor_parcela):
     print("Arquivo 'orcamento_aluguel.csv' gerado com sucesso!")
 
 
-if __name__ == "__main__":
+    if __name__ == "__main__":
     print("=== Sistema de Orçamento de Aluguel - Imobiliária R.M ===")
     tipo = input("Tipo de imóvel (apartamento / casa / estudio): ").strip().lower()
 
